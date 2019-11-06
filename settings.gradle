@@ -1,0 +1,3 @@
+rootProject.name = 'search-engine-be'
+include(':indexer')
+include(':searcher')

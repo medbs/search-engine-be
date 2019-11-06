@@ -1,0 +1,17 @@
+server:
+  port : 8081
+
+gc-project:
+  id: ${PROJECT_ID}
+
+bigtable:
+  instance: ${INSTANCE_NAME}
+  chat-table: chat-table
+
+mongodb:
+  url: ${MONGO_URI}
+  sm-database: ${CHAT_DB}
+
+lucene:
+  index-folder: indexedFiles
+  docs-path: inputFiles

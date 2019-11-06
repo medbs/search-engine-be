@@ -1,0 +1,19 @@
+/dist/
+target/
+env/
+output
+indexedFiles
+
+### IDE ###
+.idea
+*.iws
+*.iml
+*.ipr
+.vscode/
+.idea/
+Path of the file*
+
+#gradle
+.gradle
+build
+out

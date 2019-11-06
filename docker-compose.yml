@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  indexer:
+    build: "./indexer"
+    ports:
+      - 8081:8081
+    environment:
+      - MONGO_URI=mongodb://root:password@localhost:27017
+      - CHAT_DB=sm
+  searcher:
+    build: "./searcher"
+    ports:
+      - 8082:8082

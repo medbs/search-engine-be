@@ -1,0 +1,11 @@
+allprojects {
+    group = 'search-engine-be'
+    version = '0.0.1-SNAPSHOT'
+
+}
+
+subprojects {
+    repositories {
+        mavenCentral()
+    }
+}
