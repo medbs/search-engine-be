@@ -1,6 +1,6 @@
 FROM openjdk:8u111-jdk-alpine
 
-ARG MONGO_URI=mongodb://root:password@35.223.197.216:27017
+ARG MONGO_URI=mongodb://root:password@localhost:27017
 ARG CHAT_DB=sm
 
 ENV MONGO_URI $MONGO_URI

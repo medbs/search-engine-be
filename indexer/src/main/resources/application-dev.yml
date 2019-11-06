@@ -1,13 +1,6 @@
 server:
   port : 8081
 
-gc-project:
-  id: smart-meera
-
-bigtable:
-  instance: sm-instance
-  chat-table: chat-table
-
 mongodb:
   url: mongodb://root:password@35.223.197.216:27017
   sm-database: sm
