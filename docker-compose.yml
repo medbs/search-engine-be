@@ -1,8 +1,22 @@
 version: '3.7'
 
 services:
+  mongodb:
+    image: mongo
+    ports:
+      - 27017:27017
+  mongo_seed:
+    image: mongo
+    links:
+      - mongodb
+    volumes:
+      - ./mongo-seed:/mongo-seed
+    command:
+      /mongo-seed/import.sh
   indexer:
     build: "./indexer"
+    depends_on:
+      - mongodb
     ports:
       - 8081:8081
     environment:
@@ -10,5 +24,7 @@ services:
       - CHAT_DB=sm
   searcher:
     build: "./searcher"
+    depends_on:
+      - indexer
     ports:
       - 8082:8082

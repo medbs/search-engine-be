@@ -2,8 +2,8 @@ server:
   port : 8081
 
 mongodb:
-  url: mongodb://root:password@35.223.197.216:27017
-  sm-database: sm
+  url: mongodb://root:password@localhost:27017
+  sm-database: chat
 
 lucene:
   index-folder: ./indexedFiles

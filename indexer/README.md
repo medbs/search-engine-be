@@ -10,8 +10,8 @@
 
 ### Run the project as container
 
-`docker build -t indexer . && ddocker run -p 127.0.0.1:8081:8081 indexer`
+`docker build -t indexer . && docker run -p 127.0.0.1:8081:8081 indexer`
 
-### search request
+### index request
 
 `curl -X POST http://localhost:8081/api/v1/index-chat`

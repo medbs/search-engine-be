@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 @Service
 public class ChatMessageIndexingService implements IChatMessageService {
 
-    @Value("${lucene.se-folder}")
+    @Value("${lucene.index-folder}")
     private String indexFolder;
 
     @Autowired

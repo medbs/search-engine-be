@@ -17,7 +17,7 @@ public class ChatMessageController {
     @Autowired
     IChatMessageService ChatMessageService;
 
-    @RequestMapping(value = "/se-chat", method = RequestMethod.POST)
+    @RequestMapping(value = "/index-chat", method = RequestMethod.POST)
     public ResponseEntity<?> getTrendsMongo(
     ) {
         HttpHeaders httpHeaders = new HttpHeaders();

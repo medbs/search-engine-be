@@ -1,0 +1,32 @@
+[
+  {
+    "timeStamp" : "1571651516",
+    "count" : "1",
+    "text" : "Europe to Europe is quick and safe. Nobody is going to chase you for 20 euros.",
+    "word" : "quick"
+  },
+  {
+    "timeStamp" : "1571651591",
+    "count" : "1",
+    "text" : "Maldocs journalist here. Someone asked about sharing the material from  the workshop I attended. While I can't do that, I can offer some tips.  First, get the Didier Stevens tools from his website. Yes, kali has some  of his stuff already installed, but even for those the stuff on his  site works better for some reason.\nSome quick tips: for pdf, use  pdfid or peepdf before parsing the whole thing. Some people are careless  enough to leave URLs without obfuscation. Besides that, make use of  references between objects; if you have one with JS on it, check if it  refers to other objects, even if they are streams. Dump suspicious stuff  with -f and -d to look for obfuscation. Sometimes you'll find ole  documents hidden inside pdfs this way.",
+    "word" : "documents"
+  },
+  {
+    "timeStamp" : "1571651591",
+    "count" : "2",
+    "text" : "Maldocs journalist here. Someone asked about sharing the material from  the workshop I attended. While I can't do that, I can offer some tips.  First, get the Didier Stevens tools from his website. Yes, kali has some  of his stuff already installed, but even for those the stuff on his  site works better for some reason.\nSome quick tips: for pdf, use  pdfid or peepdf before parsing the whole thing. Some people are careless  enough to leave URLs without obfuscation. Besides that, make use of  references between objects; if you have one with JS on it, check if it  refers to other objects, even if they are streams. Dump suspicious stuff  with -f and -d to look for obfuscation. Sometimes you'll find ole  documents hidden inside pdfs this way.",
+    "word" : "even"
+  },
+  {
+    "timeStamp" : "1571651591",
+    "count" : "1",
+    "text" : "Maldocs journalist here. Someone asked about sharing the material from  the workshop I attended. While I can't do that, I can offer some tips.  First, get the Didier Stevens tools from his website. Yes, kali has some  of his stuff already installed, but even for those the stuff on his  site works better for some reason.\nSome quick tips: for pdf, use  pdfid or peepdf before parsing the whole thing. Some people are careless  enough to leave URLs without obfuscation. Besides that, make use of  references between objects; if you have one with JS on it, check if it  refers to other objects, even if they are streams. Dump suspicious stuff  with -f and -d to look for obfuscation. Sometimes you'll find ole  documents hidden inside pdfs this way.",
+    "word" : "website"
+  },
+  {
+    "timeStamp" : "1571651591",
+    "count" : "1",
+    "text" : "Maldocs journalist here. Someone asked about sharing the material from  the workshop I attended. While I can't do that, I can offer some tips.  First, get the Didier Stevens tools from his website. Yes, kali has some  of his stuff already installed, but even for those the stuff on his  site works better for some reason.\nSome quick tips: for pdf, use  pdfid or peepdf before parsing the whole thing. Some people are careless  enough to leave URLs without obfuscation. Besides that, make use of  references between objects; if you have one with JS on it, check if it  refers to other objects, even if they are streams. Dump suspicious stuff  with -f and -d to look for obfuscation. Sometimes you'll find ole  documents hidden inside pdfs this way.",
+    "word" : "journalist"
+  }
+]
