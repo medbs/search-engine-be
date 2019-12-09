@@ -2,7 +2,8 @@ server:
   port : 8081
 
 mongodb:
-  url: mongodb://root:password@localhost:27017
+  url: mongodb://localhost:27017
+
   sm-database: chat
 
 lucene:

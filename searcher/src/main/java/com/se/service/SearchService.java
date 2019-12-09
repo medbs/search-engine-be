@@ -21,7 +21,7 @@ public class SearchService implements ISearchService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SearchService.class);
 
-    @Value("${lucene.se-folder}")
+    @Value("${lucene.index-folder}")
     private String indexFolder;
 
     public IndexSearcher createSearcher() throws IOException {
