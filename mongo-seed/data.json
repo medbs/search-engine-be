@@ -6,6 +6,12 @@
     "word" : "quick"
   },
   {
+    "timeStamp" : "1571651516",
+    "count" : "2",
+    "text" : "Europe to Europe is quick and safe. Nobody is going to chase you for 20 euros.",
+    "word" : "Europe"
+  },
+  {
     "timeStamp" : "1571651591",
     "count" : "1",
     "text" : "Maldocs journalist here. Someone asked about sharing the material from  the workshop I attended. While I can't do that, I can offer some tips.  First, get the Didier Stevens tools from his website. Yes, kali has some  of his stuff already installed, but even for those the stuff on his  site works better for some reason.\nSome quick tips: for pdf, use  pdfid or peepdf before parsing the whole thing. Some people are careless  enough to leave URLs without obfuscation. Besides that, make use of  references between objects; if you have one with JS on it, check if it  refers to other objects, even if they are streams. Dump suspicious stuff  with -f and -d to look for obfuscation. Sometimes you'll find ole  documents hidden inside pdfs this way.",
@@ -28,5 +34,47 @@
     "count" : "1",
     "text" : "Maldocs journalist here. Someone asked about sharing the material from  the workshop I attended. While I can't do that, I can offer some tips.  First, get the Didier Stevens tools from his website. Yes, kali has some  of his stuff already installed, but even for those the stuff on his  site works better for some reason.\nSome quick tips: for pdf, use  pdfid or peepdf before parsing the whole thing. Some people are careless  enough to leave URLs without obfuscation. Besides that, make use of  references between objects; if you have one with JS on it, check if it  refers to other objects, even if they are streams. Dump suspicious stuff  with -f and -d to look for obfuscation. Sometimes you'll find ole  documents hidden inside pdfs this way.",
     "word" : "journalist"
+  },
+  {
+    "timeStamp" : "1571651591",
+    "count" : "1",
+    "text" : "Maldocs journalist here. Someone asked about sharing the material from  the workshop I attended. While I can't do that, I can offer some tips.  First, get the Didier Stevens tools from his website. Yes, kali has some  of his stuff already installed, but even for those the stuff on his  site works better for some reason.\nSome quick tips: for pdf, use  pdfid or peepdf before parsing the whole thing. Some people are careless  enough to leave URLs without obfuscation. Besides that, make use of  references between objects; if you have one with JS on it, check if it  refers to other objects, even if they are streams. Dump suspicious stuff  with -f and -d to look for obfuscation. Sometimes you'll find ole  documents hidden inside pdfs this way.",
+    "word" : "material"
+  },
+  {
+    "timeStamp" : "1571651463",
+    "count" : "1",
+    "text" : "Korn shell (also known as ksh93)\nIt's both fast and featureful. It  has all the extensions beyond POSIX that most people use, while not  being slow and fat like bash. On the topic of POSIX, it's also  POSIX-compliant.",
+    "word" : "beyond"
+  },
+  {
+    "timeStamp" : "1571651463",
+    "count" : "2",
+    "text" : "Korn shell (also known as ksh93)\nIt's both fast and featureful. It  has all the extensions beyond POSIX that most people use, while not  being slow and fat like bash. On the topic of POSIX, it's also  POSIX-compliant.",
+    "word" : "also"
+  },
+  {
+    "timeStamp" : "1571651463",
+    "count" : "1",
+    "text" : "Korn shell (also known as ksh93)\nIt's both fast and featureful. It  has all the extensions beyond POSIX that most people use, while not  being slow and fat like bash. On the topic of POSIX, it's also  POSIX-compliant.",
+    "word" : "not"
+  },
+  {
+    "timeStamp" : "1571651463",
+    "count" : "1",
+    "text" : "Korn shell (also known as ksh93)\nIt's both fast and featureful. It  has all the extensions beyond POSIX that most people use, while not  being slow and fat like bash. On the topic of POSIX, it's also  POSIX-compliant.",
+    "word" : "Korn"
+  },
+  {
+    "timeStamp" : "1571651471",
+    "count" : "1",
+    "text" : "For ravioli sake, whichever strokes your fancy. You just launch binaries  with it, using shell for scripting is pure cancer in 2019",
+    "word" : "2019"
+  },
+  {
+    "timeStamp" : "1571651471",
+    "count" : "1",
+    "text" : "For ravioli sake, whichever strokes your fancy. You just launch binaries  with it, using shell for scripting is pure cancer in 2019",
+    "word" : "shell"
   }
 ]
