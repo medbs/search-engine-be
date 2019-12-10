@@ -4,7 +4,7 @@ server:
 mongodb:
   url: mongodb://localhost:27017
 
-  sm-database: chat
+  sm-database: search
 
 lucene:
   index-folder: ./indexedFiles

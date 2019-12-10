@@ -2,4 +2,4 @@ server:
   port: 8082
 
 lucene:
-  index-folder: ../indexer/indexedFiles
+  index-folder: ./indexedFiles
