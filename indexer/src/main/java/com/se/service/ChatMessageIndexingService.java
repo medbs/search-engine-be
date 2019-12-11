@@ -7,6 +7,8 @@ import com.se.interfaces.IChatMessageService;
 import com.se.interfaces.IIndexService;
 import org.apache.lucene.store.FSDirectory;
 import org.bson.Document;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -20,6 +22,8 @@ import java.util.stream.Collectors;
 @Service
 public class ChatMessageIndexingService implements IChatMessageService {
 
+    private final Logger logger = LoggerFactory.getLogger(ChatMessageIndexingService.class);
+
     @Value("${lucene.index-folder}")
     private String indexFolder;
 
@@ -31,13 +35,12 @@ public class ChatMessageIndexingService implements IChatMessageService {
 
     public void indexChatMessages() throws IOException {
 
-        List<TextWordChatMessage> textWordChatMessage = new ArrayList<TextWordChatMessage>();
         FSDirectory dir = FSDirectory.open(Paths.get(indexFolder));
 
         List<Document> chatMessageDocuments = chatCollectionQueries.MongoTimeIntervalMessages();
-        textWordChatMessage = chatMessageDocuments.stream().map(TextWordChatMessage::new).collect(Collectors.toList());
-
+        List<TextWordChatMessage> textWordChatMessage = chatMessageDocuments.stream().map(TextWordChatMessage::new).collect(Collectors.toList());
+        
         indexService.index(dir, textWordChatMessage);
-    }
 
+    }
 }

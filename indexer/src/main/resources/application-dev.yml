@@ -3,7 +3,6 @@ server:
 
 mongodb:
   url: mongodb://localhost:27017
-
   sm-database: search
 
 lucene:

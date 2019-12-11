@@ -1,14 +1,14 @@
 version: '3.7'
 
 services:
-  mongodb:
+  mongod:
     image: mongo
     ports:
       - 27017:27017
   mongo_seed:
     image: mongo
     links:
-      - mongodb
+      - mongod
     volumes:
       - ./mongo-seed:/mongo-seed
     command:
@@ -16,12 +16,12 @@ services:
   indexer:
     build: "./indexer"
     depends_on:
-      - mongodb
+      - mongod
     ports:
       - 8081:8081
     environment:
-      - MONGO_URI=mongodb://root:password@localhost:27017
-      - CHAT_DB=sm
+      - MONGO_URI=mongodb://mongod:27017
+      - CHAT_DB=search
   searcher:
     build: "./searcher"
     depends_on:

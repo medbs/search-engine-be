@@ -18,8 +18,7 @@ public class ChatMessageController {
     IChatMessageService ChatMessageService;
 
     @RequestMapping(value = "/index-chat", method = RequestMethod.POST)
-    public ResponseEntity<?> getTrendsMongo(
-    ) {
+    public ResponseEntity<?> getTrendsMongo() {
         HttpHeaders httpHeaders = new HttpHeaders();
 
         try {
