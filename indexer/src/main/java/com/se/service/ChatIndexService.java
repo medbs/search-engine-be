@@ -3,7 +3,7 @@ package com.se.service;
 
 import com.se.dal.ChatCollectionQueries;
 import com.se.dto.TextWordChatMessage;
-import com.se.interfaces.IChatMessageService;
+import com.se.interfaces.IChatIndexService;
 import com.se.interfaces.IIndexService;
 import org.apache.lucene.store.FSDirectory;
 import org.bson.Document;
@@ -15,14 +15,13 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class ChatMessageIndexingService implements IChatMessageService {
+public class ChatIndexService implements IChatIndexService {
 
-    private final Logger logger = LoggerFactory.getLogger(ChatMessageIndexingService.class);
+    private final Logger logger = LoggerFactory.getLogger(ChatIndexService.class);
 
     @Value("${lucene.index-folder}")
     private String indexFolder;

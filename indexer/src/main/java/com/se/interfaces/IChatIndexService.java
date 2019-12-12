@@ -2,7 +2,7 @@ package com.se.interfaces;
 
 import java.io.IOException;
 
-public interface IChatMessageService {
+public interface IChatIndexService {
 
    void indexChatMessages() throws IOException;
 

@@ -1,6 +1,6 @@
 package com.se.controller;
 
-import com.se.interfaces.IChatMessageService;
+import com.se.interfaces.IChatIndexService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -11,11 +11,11 @@ import java.io.IOException;
 
 @RestController
 @RequestMapping("/api/v1")
-public class ChatMessageController {
+public class ChatIndexController {
 
 
     @Autowired
-    IChatMessageService ChatMessageService;
+    IChatIndexService ChatMessageService;
 
     @RequestMapping(value = "/index-chat", method = RequestMethod.POST)
     public ResponseEntity<?> getTrendsMongo() {

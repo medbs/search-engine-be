@@ -2,8 +2,11 @@ package com.se.dto;
 
 import org.bson.Document;
 
-public class TextWordChatMessage {
+import java.io.Serializable;
 
+public class TextWordChatMessage implements Serializable {
+
+    private static final long serialVersionUID = 4288580173555383877L;
     private String word;
     private String text;
 
@@ -19,6 +22,10 @@ public class TextWordChatMessage {
     public TextWordChatMessage(Document document) {
         this.text = document.getString("text");
         this.word = document.getString("word");
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
 
     public String getWord() {
