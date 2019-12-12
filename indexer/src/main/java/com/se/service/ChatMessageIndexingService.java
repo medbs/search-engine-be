@@ -39,7 +39,7 @@ public class ChatMessageIndexingService implements IChatMessageService {
 
         List<Document> chatMessageDocuments = chatCollectionQueries.MongoTimeIntervalMessages();
         List<TextWordChatMessage> textWordChatMessage = chatMessageDocuments.stream().map(TextWordChatMessage::new).collect(Collectors.toList());
-        
+
         indexService.index(dir, textWordChatMessage);
 
     }

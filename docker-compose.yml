@@ -22,9 +22,16 @@ services:
     environment:
       - MONGO_URI=mongodb://mongod:27017
       - CHAT_DB=search
+    volumes:
+      - index-volume:/indexedFiles
   searcher:
     build: "./searcher"
     depends_on:
       - indexer
     ports:
       - 8082:8082
+    volumes:
+      - index-volume:/indexedFiles
+
+volumes:
+  index-volume:
