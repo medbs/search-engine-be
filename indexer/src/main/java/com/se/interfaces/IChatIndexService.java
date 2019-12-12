@@ -1,10 +1,12 @@
 package com.se.interfaces;
 
-import java.io.IOException;
+import com.se.dto.ResponseDto;
+
+
 
 public interface IChatIndexService {
 
-   void indexChatMessages() throws IOException;
+   ResponseDto<?> indexChatMessages();
 
 
 }

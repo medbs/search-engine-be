@@ -1,5 +1,6 @@
 package com.se.controller;
 
+import com.se.dto.ResponseDto;
 import com.se.interfaces.IChatIndexService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -21,16 +22,13 @@ public class ChatIndexController {
     public ResponseEntity<?> getTrendsMongo() {
         HttpHeaders httpHeaders = new HttpHeaders();
 
-        try {
-            ChatMessageService.indexChatMessages();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        ResponseDto<?> response = ChatMessageService.indexChatMessages();
         return new ResponseEntity<>(
+                response,
                 httpHeaders,
-                HttpStatus.OK
+                response.getStatus()
         );
+
     }
 
 }
