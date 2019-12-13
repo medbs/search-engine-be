@@ -1,7 +1,8 @@
 package com.se.rest;
 
 
-import com.se.interfaces.IReadChatMongoIndexService;
+import com.se.dto.ResponseDto;
+import com.se.interfaces.IMongoSearchService;
 import com.se.interfaces.ISearchService;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.search.IndexSearcher;
@@ -26,7 +27,7 @@ public class MongoSearchController {
     private static final Logger LOGGER = LoggerFactory.getLogger(MongoSearchController.class);
 
     @Autowired
-    IReadChatMongoIndexService readChatMongoIndexService;
+    IMongoSearchService readChatMongoIndexService;
 
     @Autowired
     ISearchService searchService;
@@ -37,13 +38,9 @@ public class MongoSearchController {
 
         IndexSearcher searcher = searchService.createSearcher();
         HttpHeaders httpHeaders = new HttpHeaders();
-        TopDocs foundDocs = readChatMongoIndexService.searchMultipleWords(words, searcher);
+        ResponseDto<List<Document>> response = readChatMongoIndexService.searchMultipleWords(words, searcher);
 
-        List<Document> docsList = Arrays.stream(foundDocs.scoreDocs)
-                .map(scoreDoc -> searchService.toDocument(scoreDoc, searcher))
-                .collect(Collectors.toList());
-
-        return new ResponseEntity<>(docsList, httpHeaders, HttpStatus.OK);
+        return new ResponseEntity<>(response, httpHeaders, HttpStatus.OK);
     }
 
 }
