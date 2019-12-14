@@ -22,19 +22,24 @@ public class IndexService implements IIndexService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(IndexService.class);
 
-    public void index(Directory index, List<TextWordChatMessage> textWordChatMessage) throws IOException {
+    public void index(Directory index, List<TextWordChatMessage> textWordChatMessage) {
 
         StandardAnalyzer analyzer = new StandardAnalyzer();
         IndexWriterConfig config = new IndexWriterConfig(analyzer);
-        IndexWriter indexWriter = new IndexWriter(index, config);
 
-        for (TextWordChatMessage msg : textWordChatMessage) {
-            Document document = toDocument(msg);
-            indexWriter.addDocument(document);
-            indexWriter.commit();
+        try {
+            IndexWriter indexWriter = new IndexWriter(index, config);
+
+            for (TextWordChatMessage msg : textWordChatMessage) {
+                Document document = toDocument(msg);
+                indexWriter.addDocument(document);
+                indexWriter.commit();
+            }
+
+            indexWriter.close();
+        } catch (IOException e) {
+            LOGGER.error(e.getMessage());
         }
-
-        indexWriter.close();
     }
 
 
@@ -43,10 +48,10 @@ public class IndexService implements IIndexService {
         Document document = new Document();
 
         document.add(new StringField(ChatDocumentFields.WORD_FIELD, textWordChatMessage.getWord(), Field.Store.YES));
-        document.add(new SortedDocValuesField(ChatDocumentFields.WORD_FIELD, new BytesRef(textWordChatMessage.getWord())));
+        //document.add(new SortedDocValuesField(ChatDocumentFields.WORD_FIELD, new BytesRef(textWordChatMessage.getWord())));
 
         document.add(new StringField(ChatDocumentFields.TEXT_FIELD, textWordChatMessage.getText(), Field.Store.YES));
-        document.add(new SortedDocValuesField(ChatDocumentFields.TEXT_FIELD, new BytesRef(textWordChatMessage.getText())));
+       // document.add(new SortedDocValuesField(ChatDocumentFields.TEXT_FIELD, new BytesRef(textWordChatMessage.getText())));
 
         return document;
     }
